@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소상공인 인플루언서 교육 신청 양식</title>
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .header-box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff8e1;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        p.subtitle {
+            font-size: 14px;
+            color: #555;
+        }
+        .form-group {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .form-group:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .form-group label {
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .description {
+            font-size: 14px;
+            color: #777;
+            margin-top: -5px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: calc(100% - 30px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            background-color: #fff;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #ff6b00;
+            outline: none;
+        }
+        .form-group input[type="checkbox"], .form-group input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        .inline {
+            display: inline-block;
+            font-size: 16px;
+            color: #333;
+        }
+        .form-group-number {
+            background-color: #ff6b00;
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+            padding: 5px;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+            font-size: 12px;
+        }
+        .required {
+            color: #ff6b00;
+            font-size: 12px;
+        }
+        .centered-description {
+            text-align: center;
+        }
+        .boxed-description {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .options-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .options-box label {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #ff6b00;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e65a00;
+        }
+        .centered-checkbox {
+            text-align: center;
+        }
+        .centered {
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 대문 이미지 -->
+        <img src="커머스.jpg" alt="대문 이미지" class="header-image">
+        
+        <!-- 제목 부분 (네모칸 안에 디자인) -->
+        <div class="header-box">
+            <h2>소상공인 인플루언서 교육 (라이브커머스 과정) 신청 양식</h2>
+            <p class="subtitle">중소기업유통센터, SBS Studio161 운영하는 무료 라이브커머스 교육 신청 양식입니다.</p>
+        </div>
+
+        <form id="applicationForm">
+            <!-- 1. 업체명 -->
+            <div class="form-group">
+                <span class="form-group-number">1</span>
+                <label for="company">업체명 <span class="required">*필수항목</span></label>
+                <input type="text" id="company" name="company" placeholder="업체명을 입력하세요" required>
+            </div>
+
+            <!-- 2. 신청 교육생 이름 -->
+            <div class="form-group">
+                <span class="form-group-number">2</span>
+                <label for="studentName">신청 교육생 이름 (최대 5명) <span class="required">*필수항목</span></label>
+                <input type="text" id="studentName" name="studentName" placeholder="신청 교육생 이름을 입력하세요" required>
+            </div>
+
+            <!-- 3. 핸드폰 연락처 -->
+            <div class="form-group">
+                <span class="form-group-number">3</span>
+                <label for="phone">핸드폰 연락처 (번호만 입력) <span class="required">*필수항목</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="연락처를 입력하세요" required>
+            </div>
+
+            <!-- 4. 이메일 -->
+            <div class="form-group">
+                <span class="form-group-number">4</span>
+                <label for="email">이메일 <span class="required">*필수항목</span></label>
+                <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
+            </div>
+
+            <!-- 8. 지원사업 신청 경로 -->
+            <div class="form-group">
+                <span class="form-group-number">8</span>
+                <label for="applicationPath">지원사업 신청 경로 <span class="required">*필수항목</span></label>
+                <input type="text" id="applicationPath" name="applicationPath" placeholder="지원사업 신청 경로를 입력하세요" required>
+            </div>
+
+            <!-- 9. 국세 및 지방세 체납 사실 확인 -->
+            <div class="form-group">
+                <span class="form-group-number">9</span>
+                <label for="taxConfirmation">본인(업체)은 국세 및 지방세 체납 사실이 없음을 확인합니다. <span class="required">*필수항목</span></label>
+                <p class="description">"체납 사실 없습니다"라고 작성 부탁드립니다. (추후 납세증명서 제출 필수)</p>
+                <input type="text" id="taxConfirmation" name="taxConfirmation" placeholder="예: 체납 사실 없습니다" required>
+            </div>
+
+            <!-- 10. 개인정보 수집 및 이용 동의 -->
+            <div class="form-group">
+                <span class="form-group-number">10</span>
+                <label for="privacyConsent">개인정보 수집 및 이용에 동의합니다. <span class="required">*필수항목</span></label>
+                <p class="description">동의를 거부하실 수 있으나 설문 참여가 불가능합니다.</p>
+                <div class="boxed-description">
+                    수집하는 개인정보 항목: 이름, 연락처, 이메일<br>
+                    수집 및 이용 목적: 교육 진행을 위한 개인정보 수집<br>
+                    보유 및 이용 기간: 교육 사업 종료 이후 1개월 보관
+                </div>
+                <div class="centered-checkbox">
+                    <input type="checkbox" id="privacyConsent" name="privacyConsent" value="동의" required>
+                    <label for="privacyConsent">동의</label>
+                </div>
+            </div>
+
+            <button type="button" onclick="showReviewPage()">신청 완료</button>
+        </form>
+
+        <!-- 검토 페이지 -->
+        <div id="reviewPage" class="hidden">
+            <h3>입력하신 정보를 확인해주세요:</h3>
+            <p><strong>업체명:</strong> <span id="reviewCompany"></span></p>
+            <p><strong>신청 교육생 이름:</strong> <span id="reviewStudentName"></span></p>
+            <p><strong>핸드폰 연락처:</strong> <span id="reviewPhone"></span></p>
+            <p><strong>이메일:</strong> <span id="reviewEmail"></span></p>
+            <p><strong>지원사업 신청 경로:</strong> <span id="reviewApplicationPath"></span></p>
+            <p><strong>국세 및 지방세 체납 확인:</strong> <span id="reviewTaxConfirmation"></span></p>
+            <button type="button" onclick="submitForm()">최종 제출</button>
+        </div>
+
+        <div id="confirmationMessage" class="centered hidden">
+            <h3>응답이 제출되었습니다!</h3>
+        </div>
+    </div>
+
+    <script>
+        function showReviewPage() {
+            // 입력값 가져오기
+            const company = document.getElementById('company').value;
+            const studentName = document.getElementById('studentName').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const applicationPath = document.getElementById('applicationPath').value;
+            const taxConfirmation = document.getElementById('taxConfirmation').value;
+
+            // 검토 페이지에 입력값 표시
+            document.getElementById('reviewCompany').innerText = company;
+            document.getElementById('reviewStudentName').innerText = studentName;
+            document.getElementById('reviewPhone').innerText = phone;
+            document.getElementById('reviewEmail').innerText = email;
+            document.getElementById('reviewApplicationPath').innerText = applicationPath;
+            document.getElementById('reviewTaxConfirmation').innerText = taxConfirmation;
+
+            // 폼 숨기고 검토 페이지 보여주기
+            document.getElementById('applicationForm').classList.add('hidden');
+            document.getElementById('reviewPage').classList.remove('hidden');
+        }
+
+        function submitForm() {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwF3CfaL9EEqsAmdFwp96Udr3R7kksaRjcI6_0cOdi8LOBk-OnVJAazgeqBXvvYI0I/exec'; // Google Apps Script 웹 애플리케이션 URL
+            const form = document.forms['applicationForm'];
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    // 검토 페이지 숨기고 완료 메시지 보여주기
+                    document.getElementById('reviewPage').classList.add('hidden');
+                    document.getElementById('confirmationMessage').classList.remove('hidden');
+                })
+                .catch(error => console.error('Error!', error.message))
+        }
+    </script>
+
+</body>
+</html>
+
